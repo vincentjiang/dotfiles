@@ -4,6 +4,7 @@ map <C-c> y:e ~/clipsongzboard<CR>P:w !pbcopy<CR><CR>:bdelete!<CR>
 set autoindent
 
 let NERDTreeShowHidden=1
+let NERDTreeIgnore=['.DS_Store']
 
 " unmap the arrow keys to avoid temptation
 noremap <Up> <nop>
