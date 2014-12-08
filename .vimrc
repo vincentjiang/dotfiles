@@ -5,15 +5,17 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+set expandtab "将tab键转换为space输出
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set expandtab
 
 set nu
 set ruler "开启右下角光标位置显示
 set wildmenu "在输入命令时列出匹配项目
 set scrolloff=5 "设定光标离窗口上下边界 5 行时窗口自动滚动
+set autoread "文件在Vim之外修改过，自动重新读入
+set ai "自动缩进
 
 set incsearch
 set hlsearch
