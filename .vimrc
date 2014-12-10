@@ -16,6 +16,11 @@ set wildmenu "在输入命令时列出匹配项目
 set scrolloff=5 "设定光标离窗口上下边界 5 行时窗口自动滚动
 set autoread "文件在Vim之外修改过，自动重新读入
 set ai "自动缩进
+set si "智能缩进
+set cursorline
+set history=100
+set magic
+set showcmd
 
 set incsearch
 set hlsearch
@@ -53,12 +58,12 @@ map <silent><F7>  <leader>ig
 Plugin 'scrooloose/nerdtree'
 map <silent><F8> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
-let NERDTreeIgnore=['.DS_Store']
+let NERDTreeIgnore=['.DS_Store', '.git']
 
 Plugin 'kchmck/vim-coffee-script'
 
 Plugin 'kien/ctrlp.vim'
-map <c-o> :CtrlPBuffer<CR>
+map <C-o> :CtrlPBuffer<CR>
 
 " --------------------------------------------------
 "    snippets for various programming languages 
@@ -78,6 +83,8 @@ Plugin 'slim-template/vim-slim'
 Plugin 'Lokaltog/vim-powerline'
 
 Plugin 'tpope/vim-fugitive'
+
+Plugin 'scrooloose/syntastic'
 
 call vundle#end()            " required
 
