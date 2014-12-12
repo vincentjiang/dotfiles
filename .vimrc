@@ -18,9 +18,11 @@ set autoread "文件在Vim之外修改过，自动重新读入
 set ai "自动缩进
 set si "智能缩进
 set cursorline
-set history=100
+set history=1000
 set magic
 set showcmd
+set noswapfile "不生成交换文件
+set hidden
 
 set incsearch
 set hlsearch
