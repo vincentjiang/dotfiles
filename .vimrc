@@ -73,7 +73,7 @@ map <C-o> :CtrlPBuffer<CR>
 "    snippets for various programming languages 
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
+Plugin 'garbas/vim-snipmate' "依赖于vim-addon-mw-utils和tlib
 " Optional:
 Plugin 'honza/vim-snippets'
 " --------------------------------------------------
@@ -85,7 +85,11 @@ Plugin 'ervandew/supertab'
 Plugin 'slim-template/vim-slim'
 
 Plugin 'bling/vim-airline'
-let g:airline_powerline_fonts = 1
+set laststatus=2
+let g:airline_detect_whitespace = 0 "关闭空白符检测
+let g:airline_theme = "simple" "设定主题
+" let g:airline#extensions#tabline#enabled = 1 "顶部tab栏显示
+" let g:airline_powerline_fonts = 1 "启用airline字体
 
 Plugin 'scrooloose/syntastic'
 
