@@ -87,7 +87,7 @@ Plugin 'slim-template/vim-slim'
 Plugin 'bling/vim-airline'
 set laststatus=2
 let g:airline_detect_whitespace = 0 "关闭空白符检测
-let g:airline_theme = "simple" "设定主题
+" let g:airline_theme = "simple" "设定主题
 " let g:airline#extensions#tabline#enabled = 1 "顶部tab栏显示
 " let g:airline_powerline_fonts = 1 "启用airline字体
 
