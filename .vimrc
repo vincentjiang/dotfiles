@@ -80,7 +80,8 @@ Plugin 'honza/vim-snippets'
 
 Plugin 'Raimondi/delimitMate'
 
-Plugin 'ervandew/supertab'
+Plugin 'Shougo/neocomplcache.vim'
+let g:neocomplcache_enable_at_startup = 1
 
 Plugin 'slim-template/vim-slim'
 
