@@ -5,10 +5,10 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-set expandtab "将tab键转换为space输出
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+" 设置缩进
+set expandtab smarttab
+set tabstop=2 softtabstop=2 shiftwidth=2
+set autoindent cindent smartindent shiftround
 
 set nu
 set ruler "开启右下角光标位置显示
@@ -18,21 +18,36 @@ set autoread "文件在Vim之外修改过，自动重新读入
 set ai "自动缩进
 set si "智能缩进
 set cursorline
-set history=1000
+set modelines=1
+set laststatus=1
+set history=100
 set magic
 set showcmd
+set showmode
+set matchtime=1
 set noswapfile "不生成交换文件
+set nobackup
 set hidden
+set backspace=indent,eol,start "make that backspace key work the way it should
 
 set incsearch
 set hlsearch
+set infercase
 set ignorecase
+set smartcase
+set showmatch
 
 let mapleader= ","
 
 syntax enable
+
 set background=dark
-colorscheme desert
+colorscheme grb256
+
+" Make comments and special characters look better
+highlight Comment    ctermfg=245 guifg=#8a8a8a
+highlight NonText    ctermfg=240 guifg=#585858
+highlight SpecialKey ctermfg=240 guifg=#585858
 
 
 " #########  Vundle begin  ########
