@@ -44,12 +44,6 @@ syntax enable
 set background=dark
 colorscheme grb256
 
-" Make comments and special characters look better
-highlight Comment    ctermfg=245 guifg=#8a8a8a
-highlight NonText    ctermfg=240 guifg=#585858
-highlight SpecialKey ctermfg=240 guifg=#585858
-
-
 " #########  Vundle begin  ########
 
 set nocompatible              " be iMproved, required
