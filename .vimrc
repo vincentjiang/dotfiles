@@ -32,7 +32,6 @@ set nobackup
 set hidden
 set backspace=indent,eol,start "make that backspace key work the way it should
 set linespace=0
-set mouse=a
 set mousehide
 set winminheight=0
 set wildmode=list:longest,full
