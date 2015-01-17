@@ -17,8 +17,6 @@ set scrolljump=5
 set scrolloff=5 "设定光标离窗口上下边界 5 行时窗口自动滚动
 set foldenable
 set autoread "文件在Vim之外修改过，自动重新读入
-set ai "自动缩进
-set si "智能缩进
 set cursorline
 set modelines=1
 set laststatus=1
@@ -42,7 +40,6 @@ set infercase
 set ignorecase
 set smartcase
 set showmatch
-set nowrap
 
 let mapleader= ","
 
