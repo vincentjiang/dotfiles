@@ -32,7 +32,6 @@ set nobackup
 set hidden
 set backspace=indent,eol,start "make that backspace key work the way it should
 set linespace=0
-set mouse=a
 set mousehide
 set winminheight=0
 set wildmode=list:longest,full
@@ -43,7 +42,6 @@ set infercase
 set ignorecase
 set smartcase
 set showmatch
-set nowrap
 
 let mapleader= ","
 
@@ -70,6 +68,8 @@ Plugin 'tpope/vim-rails'
 
 Plugin 'Lokaltog/vim-easymotion'
 
+Plugin 'Raimondi/delimitMate'
+
 Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -87,7 +87,7 @@ Plugin 'kchmck/vim-coffee-script'
 " -------------------Ctrlp配置----------------------
 Plugin 'kien/ctrlp.vim'
 map <C-o> :CtrlPBuffer<CR>
-let g:ctrlp_working_path_mode = 'ra'
+"let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = {
       \ 'dir':  '\.git$\|\.hg$\|\.svn$',
       \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
@@ -136,8 +136,6 @@ Plugin 'bling/vim-airline'
 let g:airline_theme = "solarized" "设定主题
 let g:airline_left_sep = '>'
 let g:airline_right_sep = '<'
-
-Plugin 'scrooloose/syntastic'
 
 Plugin 'airblade/vim-gitgutter'
 
