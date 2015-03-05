@@ -70,8 +70,6 @@ Plugin 'Raimondi/delimitMate'
 
 Plugin 'scrooloose/nerdcommenter'
 
-Plugin 'Raimondi/delimitMate'
-
 Plugin 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_guide_size = 1
 map <silent><F7>  <leader>ig
