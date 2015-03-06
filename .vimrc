@@ -130,12 +130,12 @@ let g:neocomplcache_enable_at_startup = 1
 
 Plugin 'slim-template/vim-slim'
 
+Plugin 'airblade/vim-gitgutter'
+
 Plugin 'bling/vim-airline'
 let g:airline_theme = "solarized" "设定主题
 let g:airline_left_sep = '>'
 let g:airline_right_sep = '<'
-
-Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()            " required
 
