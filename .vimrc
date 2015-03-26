@@ -137,6 +137,14 @@ let g:airline_theme = "solarized" "设定主题
 let g:airline_left_sep = '>'
 let g:airline_right_sep = '<'
 
+" --------------markdown---------------------
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+
+let g:vim_markdown_folding_disabled=1  "Disable Folding
+
+" --------------markdown---------------------
+
 call vundle#end()            " required
 
 filetype plugin indent on    " required
