@@ -62,13 +62,15 @@ Plugin 'tpope/vim-fugitive'
 
 Plugin 'L9'
 
+Plugin 'vim-ruby/vim-ruby'
+
 Plugin 'tpope/vim-rails'
 
 Plugin 'Lokaltog/vim-easymotion'
 
-Plugin 'Raimondi/delimitMate'
+Plugin 'Raimondi/delimitMate' " 自动补全引号、括号等
 
-Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdcommenter' " 注释
 
 Plugin 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_guide_size = 1
@@ -82,7 +84,7 @@ let g:nerdtree_tabs_open_on_gui_startup=0
 
 Plugin 'kchmck/vim-coffee-script'
 
-" -------------------Ctrlp配置----------------------
+"" -------------------Ctrlp配置----------------------
 Plugin 'kien/ctrlp.vim'
 map <C-o> :CtrlPBuffer<CR>
 "let g:ctrlp_working_path_mode = 'ra'
@@ -123,10 +125,11 @@ Plugin 'garbas/vim-snipmate' "依赖于vim-addon-mw-utils和tlib
 Plugin 'honza/vim-snippets'
 " --------------------------------------------------
 
-Plugin 'tpope/vim-surround'
-
 Plugin 'Shougo/neocomplcache.vim'
 let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_smart_case = 1
+
+Plugin 'tpope/vim-surround'
 
 Plugin 'slim-template/vim-slim'
 
@@ -143,7 +146,22 @@ Plugin 'plasticboy/vim-markdown'
 
 let g:vim_markdown_folding_disabled=1  "Disable Folding
 
+Plugin 'rking/ag.vim' " replacement for Ack
+
 " --------------markdown---------------------
+
+" --------------语法检查---------------------
+"Plugin 'scrooloose/syntastic'
+
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 0
+"let g:syntastic_check_on_open = 0
+"let g:syntastic_check_on_wq = 0
+" --------------语法检查---------------------
 
 call vundle#end()            " required
 
