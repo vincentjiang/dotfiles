@@ -148,6 +148,13 @@ let g:vim_markdown_folding_disabled=1  "Disable Folding
 
 Plugin 'rking/ag.vim' " replacement for Ack
 
+Plugin 'terryma/vim-multiple-cursors' "多光标选择
+
+Plugin 'pangloss/vim-javascript' "javascript语法和缩进
+
+Plugin 'mxw/vim-jsx' "ReactJS高亮
+let g:jsx_ext_required = 0  "0：同时支持.js和.jsx文件，1：只支持.jsx文件
+
 " --------------markdown---------------------
 
 " --------------语法检查---------------------
