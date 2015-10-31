@@ -72,6 +72,8 @@ Plugin 'Raimondi/delimitMate' " 自动补全引号、括号等
 
 Plugin 'scrooloose/nerdcommenter' " 注释
 
+Plugin 'ntpeters/vim-better-whitespace' " Better whitespace highlighting for Vim
+
 Plugin 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_guide_size = 1
 map <silent><F7>  <leader>ig
@@ -125,9 +127,9 @@ Plugin 'garbas/vim-snipmate' "依赖于vim-addon-mw-utils和tlib
 Plugin 'honza/vim-snippets'
 " --------------------------------------------------
 
-Plugin 'Shougo/neocomplcache.vim'
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_smart_case = 1
+"Plugin 'Shougo/neocomplcache.vim'
+"let g:neocomplcache_enable_at_startup = 1
+"let g:neocomplcache_enable_smart_case = 1
 
 Plugin 'tpope/vim-surround'
 
@@ -148,27 +150,16 @@ let g:vim_markdown_folding_disabled=1  "Disable Folding
 
 Plugin 'rking/ag.vim' " replacement for Ack
 
-Plugin 'terryma/vim-multiple-cursors' "多光标选择
 
-Plugin 'pangloss/vim-javascript' "javascript语法和缩进
+" --------------vim-rspec---------------------
+Plugin 'thoughtbot/vim-rspec'
 
-Plugin 'mxw/vim-jsx' "ReactJS高亮
-let g:jsx_ext_required = 0  "0：同时支持.js和.jsx文件，1：只支持.jsx文件
-
-" --------------markdown---------------------
-
-" --------------语法检查---------------------
-"Plugin 'scrooloose/syntastic'
-
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 0
-"let g:syntastic_check_on_open = 0
-"let g:syntastic_check_on_wq = 0
-" --------------语法检查---------------------
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+" --------------vim-rspec---------------------
 
 call vundle#end()            " required
 
