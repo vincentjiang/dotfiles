@@ -119,7 +119,7 @@ endif
 " -------------------------------------------------
 
 " --------------------------------------------------
-"    snippets for various programming languages 
+"    snippets for various programming languages
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate' "依赖于vim-addon-mw-utils和tlib
@@ -127,9 +127,9 @@ Plugin 'garbas/vim-snipmate' "依赖于vim-addon-mw-utils和tlib
 Plugin 'honza/vim-snippets'
 " --------------------------------------------------
 
-"Plugin 'Shougo/neocomplcache.vim'
-"let g:neocomplcache_enable_at_startup = 1
-"let g:neocomplcache_enable_smart_case = 1
+Plugin 'Shougo/neocomplcache.vim'
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_smart_case = 1
 
 Plugin 'tpope/vim-surround'
 
