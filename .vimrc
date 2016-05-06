@@ -236,6 +236,9 @@ endif
 
 Plugin 'keith/rspec.vim'
 
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+
 
 call vundle#end()            " required
 
