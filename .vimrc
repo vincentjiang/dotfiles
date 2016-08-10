@@ -41,7 +41,7 @@ set smartcase
 set showmatch
 set nocursorcolumn
 set nocursorline
-set synmaxcol=200
+set synmaxcol=400
 set colorcolumn=80 "设置每行80个字符的标记
 
 let mapleader= ","
@@ -201,6 +201,16 @@ nmap <Leader>af :AgFile ""<Left>
 " --------------vim-rspec---------------------
 Plugin 'thoughtbot/vim-rspec'
 
+Plugin 'crooloose/syntastic.git'
+let g:syntastic_check_on_open=1
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_wq = 0
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
@@ -209,36 +219,11 @@ map <Leader>a :call RunAllSpecs()<CR>
 let g:rspec_runner = "os_x_iterm2"
 " --------------vim-rspec---------------------
 
-Plugin 'scrooloose/syntastic.git'
-"mark syntax errors with :signs
-let g:syntastic_enable_signs=1
-"automatically jump to the error when saving the file
-let g:syntastic_auto_jump=0
-"show the error list automatically
-let g:syntastic_auto_loc_list=1
-"don't care about warnings
-let g:syntastic_quiet_messages = {'level': 'warnings'}
-
-" I have no idea why this is not working, as it used to
-" be a part of syntastic code but was apparently removed
-" This will make syntastic find the correct ruby specified by mri
-function! s:FindRubyExec()
-  if executable("rvm")
-    return system("rvm tools identifier")
-  endif
-
-  return "ruby"
-endfunction
-
-if !exists("g:syntastic_ruby_exec")
-  let g:syntastic_ruby_exec = s:FindRubyExec()
-endif
-
 Plugin 'keith/rspec.vim'
 
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-
+Plugin 'rizzatti/dash.vim'
 
 call vundle#end()            " required
 
