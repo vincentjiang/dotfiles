@@ -1,15 +1,24 @@
+" git clone https://github.com/Raimondi/delimitMate delimitMate 自动补全引号、括号等
+" git clone https://github.com/rizzatti/dash.vim dash  use Dash in VIM
+" git clone https://github.com/vim-airline/vim-airline airline  beatiful statusline
+
 " custom config
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-set scrolloff=5 "设定光标离窗口上下边界 5 行时窗口自动滚动
+
+set scrolloff=5 " 设定光标离窗口上下边界 5 行时窗口自动滚动
+
+" buffer of the old file will only be hidden when you switch to the new file.
+" When you switch back, you still have your undo history
+set hidden
 
 " theme
 color solarized
 
 " scrooloose/nerdtree
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden = 1
 
 " kien/ctrlp.vim
 map <C-o> :CtrlPBuffer<CR>
@@ -41,8 +50,8 @@ if isdirectory(expand("~/.vim/bundle/ctrlp-funky/"))
 endif
 
 " crooloose/syntastic.git
-let g:syntastic_check_on_open=1
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+let g:syntastic_check_on_open = 1
+let g:syntastic_html_tidy_ignore_errors = [" proprietary attribute \"ng-"]
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 0
@@ -51,7 +60,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " vim-airline/vim-airline
-let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts = 1
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
@@ -59,4 +68,4 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
-let g:airline_detect_modified=1
+let g:airline_detect_modified = 1
