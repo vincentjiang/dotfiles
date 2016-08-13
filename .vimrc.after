@@ -1,6 +1,7 @@
 " git clone https://github.com/Raimondi/delimitMate delimitMate 自动补全引号、括号等
 " git clone https://github.com/rizzatti/dash.vim dash  use Dash in VIM
 " git clone https://github.com/vim-airline/vim-airline airline  beatiful statusline
+" git clone https://github.com/rking/ag.vim ag
 
 " custom config
 map <C-h> <C-w>h
@@ -69,3 +70,7 @@ let g:airline_symbols.branch = "\u2b60"
 let g:airline_symbols.readonly = "\u2b64"
 let g:airline_symbols.linenr = "\u2b61"
 let g:airline_detect_modified = 1
+
+" rking/ag.vim
+nmap <Leader>ag :Ag ""<Left>
+nmap <Leader>af :AgFile ""<Left>

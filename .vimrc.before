@@ -1,1 +1,3 @@
 let mapleader = ","
+
+call janus#disable_plugin('ack', "I don't like it, please use ag instead.")
