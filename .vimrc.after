@@ -2,6 +2,7 @@
 " git clone https://github.com/rizzatti/dash.vim dash  use Dash in VIM
 " git clone https://github.com/vim-airline/vim-airline airline  beatiful statusline
 " git clone https://github.com/rking/ag.vim ag
+" git clone https://github.com/mxw/vim-jsx vim-jsx
 
 " custom config
 map <C-h> <C-w>h
@@ -14,6 +15,9 @@ set scrolloff=5 " 设定光标离窗口上下边界 5 行时窗口自动滚动
 " buffer of the old file will only be hidden when you switch to the new file.
 " When you switch back, you still have your undo history
 set hidden
+set autoread " 文件在Vim之外修改过，自动重新读入
+set noswapfile " 不生成交换文件
+set nobackup " 不生成备份文件
 
 " theme
 color solarized
