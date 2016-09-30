@@ -3,6 +3,7 @@
 " git clone https://github.com/vim-airline/vim-airline airline  beatiful statusline
 " git clone https://github.com/rking/ag.vim ag
 " git clone https://github.com/mxw/vim-jsx vim-jsx
+" git clone https://github.com/kchmck/vim-coffee-script vim-coffee-script
 
 " custom config
 map <C-h> <C-w>h
@@ -18,6 +19,7 @@ set hidden
 set autoread " 文件在Vim之外修改过，自动重新读入
 set noswapfile " 不生成交换文件
 set nobackup " 不生成备份文件
+set wrap
 
 " theme
 color solarized
