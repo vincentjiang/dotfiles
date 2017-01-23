@@ -220,7 +220,6 @@ let g:rspec_runner = "os_x_iterm2"
 " --------------vim-rspec---------------------
 
 Plugin 'keith/rspec.vim'
-
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'rizzatti/dash.vim'
