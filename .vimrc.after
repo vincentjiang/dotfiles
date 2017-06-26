@@ -1,9 +1,11 @@
+" 在 ~/.janus 目录下执行以下命令
 " git clone https://github.com/Raimondi/delimitMate delimitMate 自动补全引号、括号等
 " git clone https://github.com/rizzatti/dash.vim dash  use Dash in VIM
 " git clone https://github.com/vim-airline/vim-airline airline  beatiful statusline
 " git clone https://github.com/rking/ag.vim ag
 " git clone https://github.com/mxw/vim-jsx vim-jsx
 " git clone https://github.com/kchmck/vim-coffee-script vim-coffee-script
+" git clone https://github.com/shime/vim-livedown
 
 " custom config
 map <C-h> <C-w>h
@@ -69,3 +71,6 @@ set statusline+=%*
 " rking/ag.vim
 nmap <Leader>ag :Ag ""<Left>
 nmap <Leader>af :AgFile ""<Left>
+
+" shime/vim-livedown
+nmap <Leader>mp :LivedownToggle<CR>
