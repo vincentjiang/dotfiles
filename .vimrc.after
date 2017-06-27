@@ -1,11 +1,12 @@
 " 在 ~/.janus 目录下执行以下命令
 " git clone https://github.com/Raimondi/delimitMate delimitMate 自动补全引号、括号等
-" git clone https://github.com/rizzatti/dash.vim dash  use Dash in VIM
-" git clone https://github.com/vim-airline/vim-airline airline  beatiful statusline
+" git clone https://github.com/rizzatti/dash.vim dash use Dash in VIM
+" git clone https://github.com/vim-airline/vim-airline airline beatiful statusline
 " git clone https://github.com/rking/ag.vim ag
 " git clone https://github.com/mxw/vim-jsx vim-jsx
 " git clone https://github.com/kchmck/vim-coffee-script vim-coffee-script
-" git clone https://github.com/shime/vim-livedown
+" git clone https://github.com/shime/vim-livedown Markdown Preview
+" git clone https://github.com/henrik/vim-indexed-search Show 'Match 123 of 456 /search term/' in Vim searches
 
 " custom config
 map <C-h> <C-w>h
