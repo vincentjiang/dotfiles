@@ -7,6 +7,7 @@
 " git clone https://github.com/kchmck/vim-coffee-script vim-coffee-script
 " git clone https://github.com/shime/vim-livedown Markdown Preview
 " git clone https://github.com/henrik/vim-indexed-search Show 'Match 123 of 456 /search term/' in Vim searches
+" git clone https://github.com/thoughtbot/vim-rspec
 
 " custom config
 map <C-h> <C-w>h
@@ -75,3 +76,10 @@ nmap <Leader>af :AgFile ""<Left>
 
 " shime/vim-livedown
 nmap <Leader>mp :LivedownToggle<CR>
+
+" RSpec.vim mappings
+let g:rspec_runner = "os_x_iterm2"
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
