@@ -30,7 +30,7 @@ color solarized
 
 " scrooloose/nerdtree
 let NERDTreeShowHidden = 1
-let NERDTreeIgnore = ['\.git', '.DS_Store']
+let NERDTreeIgnore = ['.git$', '.DS_Store$']
 
 " kien/ctrlp.vim
 map <C-o> :CtrlPBuffer<CR>
