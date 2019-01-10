@@ -1,3 +1,12 @@
+"        _
+" __   _(_)_ __ ___  _ __ ___
+" \ \ / / | '_ ` _ \| '__/ __|
+"  \ V /| | | | | | | | | (__
+"   \_/ |_|_| |_| |_|_|  \___|
+"
+" VincentJiang's .vimrc file
+"
+
 set encoding=utf8
 
 map <C-h> <C-w>h
@@ -5,44 +14,63 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" 设置缩进
-set expandtab smarttab
-set tabstop=2 softtabstop=2 shiftwidth=2
-set autoindent cindent smartindent shiftround
-
-set nu
-set ruler "开启右下角光标位置显示
-set wildmenu "在输入命令时列出匹配项目
-set scrolljump=5
-set scrolloff=5 "设定光标离窗口上下边界 5 行时窗口自动滚动
-set foldenable
-set autoread "文件在Vim之外修改过，自动重新读入
-set modelines=1
-set laststatus=1
-set history=100
-set magic
-set showcmd
-set showmode
-set matchtime=1
-set noswapfile "不生成交换文件
-set nobackup
-set hidden
-set backspace=indent,eol,start "make that backspace key work the way it should
-set linespace=0
-set mousehide
-set winminheight=0
-set wildmode=list:longest,full
-set whichwrap=b,s,h,l,<,>,[,]
-set incsearch
-set hlsearch
-set infercase
-set ignorecase
-set smartcase
-set showmatch
-set nocursorcolumn
-set nocursorline
-set synmaxcol=400
-set colorcolumn=80 "设置每行80个字符的标记
+set autoindent              " Carry over indenting from previous line
+set autoread                " Don't bother me hen a file changes
+set autowrite               " Write on :next/:prev/^Z
+set backspace=indent,eol,start
+                            " Allow backspace beyond insertion point
+set cindent                 " Automatic program indenting
+set cinkeys-=0#             " Comments don't fiddle with indenting
+set cino=                   " See :h cinoptions-values
+set commentstring=\ \ #%s   " When folds are created, add them to this
+set copyindent              " Make autoindent use the same chars as prev line
+set directory-=.            " Don't store temp files in cwd
+set encoding=utf8           " UTF-8 by default
+set expandtab               " No tabs
+set fileformats=unix,dos,mac  " Prefer Unix
+set fillchars=vert:\ ,stl:\ ,stlnc:\ ,fold:-,diff:┄
+                            " Unicode chars for diffs/folds, and rely on
+                            " Colors for window borders
+silent! set foldmethod=marker " Use braces by default
+set formatoptions=tcqn1     " t - autowrap normal text
+                            " c - autowrap comments
+                            " q - gq formats comments
+                            " n - autowrap lists
+                            " 1 - break _before_ single-letter words
+                            " 2 - use indenting from 2nd line of para
+set hidden                  " Don't prompt to save hidden windows until exit
+set history=200             " How many lines of history to save
+set hlsearch                " Hilight searching
+set ignorecase              " Case insensitive
+set incsearch               " Search as you type
+set infercase               " Completion recognizes capitalization
+set laststatus=2            " Always show the status bar
+set linebreak               " Break long lines by word, not char
+set list                    " Show whitespace as special chars - see listchars
+set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:· " Unicode characters for various things
+set matchtime=2             " Tenths of second to hilight matching paren
+set modelines=5             " How many lines of head & tail to look for ml's
+set nobackup                " No backups left after done editing
+set number                  " Use line numbers to start
+set visualbell t_vb=        " No flashing or beeping at all
+set nowritebackup           " No backups made while editing
+set ruler                   " Show row/col and percentage
+set scroll=4                " Number of lines to scroll with ^U/^D
+set scrolloff=15            " Keep cursor away from this many chars top/bot
+set sessionoptions-=options " Don't save runtimepath in Vim session (see tpope/vim-pathogen docs)
+set shiftround              " Shift to certain columns, not just n spaces
+set shiftwidth=2            " Number of spaces to shift for autoindent or >,<
+set shortmess+=A            " Don't bother me when a swapfile exists
+set showbreak=              " Show for lines that have been wrapped, like Emacs
+set showmatch               " Hilight matching braces/parens/etc.
+set sidescrolloff=3         " Keep cursor away from this many chars left/right
+set smartcase               " Lets you search for ALL CAPS
+set softtabstop=2           " Spaces 'feel' like tabs
+set tabstop=2               " The One True Tab
+set textwidth=100           " 100 is the new 80
+set wildmenu                " Show possible completions on command line
+set wildmode=list:longest,full " List all options and complete
+set wildignore=*.class,*.o,*~,*.pyc,.git,node_modules,coverage,.svn,.ico,tmp,vendor,public,log  " Ignore certain files in tab-completion
 
 let mapleader= ","
 
@@ -61,45 +89,22 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'tpope/vim-fugitive'
-
-Plugin 'L9'
-
-Plugin 'vim-ruby/vim-ruby'
 
 Plugin 'tpope/vim-rails'
 
-Plugin 'Lokaltog/vim-easymotion'
-let g:EasyMotion_keys='asdfjkoweriop'
-nmap <Leader><ESC> ,,w
-nmap <Leader><S-ESC> ,,b
-
 Plugin 'Raimondi/delimitMate' " 自动补全引号、括号等
 
-Plugin 'scrooloose/nerdcommenter' " 注释
-
-Plugin 'ntpeters/vim-better-whitespace' " Better whitespace highlighting for Vim
-
-Plugin 'nathanaelkane/vim-indent-guides'
-let g:indent_guides_auto_colors = 1
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
-map <silent><F7>  <leader>ig
-
 Plugin 'scrooloose/nerdtree'
-map <silent><F8> :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1
-let NERDTreeIgnore=['.DS_Store', '^\.git$', '\py[cd]$', '\~$', '\.swp$', '^\.hg$', '^\.svn$', '\.baz$']
-let g:nerdtree_tabs_open_on_gui_startup=0
-
-Plugin 'kchmck/vim-coffee-script'
+map <leader>n :NERDTreeToggle<CR>
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeMarkBookmarks = 0
+let g:NERDTreeAutoDeleteBuffer = 1
+let g:NERDTreeStatusLine = -1
+let NERDTreeShowHidden = 1
 
 Plugin 'kien/ctrlp.vim'
 map <C-o> :CtrlPBuffer<CR>
 let g:ctrlp_switch_buffer = 0
-let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\.git$\|\.hg$\|\.svn$',
-      \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
 if executable('ag')
   let s:ctrlp_fallback = 'ag %s --nocolor -l -g "'
 elseif executable('ack-grep')
@@ -109,123 +114,31 @@ elseif executable('ack')
 else
   let s:ctrlp_fallback = 'find %s -type f'
 endif
-let g:ctrlp_user_command = {
-      \ 'types': {
-      \ 1: ['.git', 'cd %s && git ls-files .  --cached --exclude-standard --others'],
-      \ 2: ['.hg', 'hg --cwd %s locate -I .'],
-      \ },
-      \ 'fallback': s:ctrlp_fallback
-      \ }
-if isdirectory(expand("~/.vim/bundle/ctrlp-funky/"))
-  " CtrlP extensions
-  let g:ctrlp_extensions = ['funky']
-  "funky
-  nnoremap <Leader>fu :CtrlPFunky<Cr>
-endif
-
-" --------------------------------------------------
-"    snippets for various programming languages
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate' "依赖于vim-addon-mw-utils和tlib
-" Optional:
-Plugin 'honza/vim-snippets'
-" --------------------------------------------------
-
-Plugin 'Shougo/neocomplete.vim'
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_camel_case = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#max_list = 5
-let g:neocomplete#auto_completion_start_length = 3
-
-Plugin 'tpope/vim-surround'
 
 Plugin 'slim-template/vim-slim'
 
 Plugin 'airblade/vim-gitgutter'
 
-Plugin 'itchyny/lightline.vim'
-let g:lightline = {
-      \ 'colorscheme': 'solarized',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'fugitive': 'MyFugitive',
-      \   'readonly': 'MyReadonly',
-      \   'filename': 'MyFilename',
-      \ },
-      \ 'separator': { 'left': '⮀', 'right': '⮂' },
-      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
-      \ }
+Plugin 'vim-airline/vim-airline'
 
-function! MyReadonly()
-  if &filetype == "help"
-    return ""
-  elseif &readonly
-    return "⭤ "
-  else
-    return ""
-  endif
-endfunction
+Plugin 'w0rp/ale'
 
-function! MyFugitive()
-  if exists("*fugitive#head")
-    let _ = fugitive#head()
-    return strlen(_) ? '⭠ '._ : ''
-  endif
-  return ''
-endfunction
+Plugin 'mileszs/ack.vim'
+let g:ackprg = 'ag --nogroup --nocolor --column'
+nnoremap <Leader>a :Ack!<Space>
 
-function! MyFilename()
-  return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-        \ ('' != expand('%') ? expand('%') : '[NoName]')
-endfunction
+Plugin 'tpope/vim-fugitive'
+nnoremap <Leader>gb :Gblame<CR>
 
-" Use status bar even with single buffer
-set laststatus=2
+Plugin 'ervandew/supertab'
 
-" --------------markdown---------------------
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
-let g:vim_markdown_folding_disabled=1  "Disable Folding
+Plugin 'scrooloose/nerdcommenter'
 
-Plugin 'rking/ag.vim' " replacement for Ack
-nmap <Leader>ag :Ag ""<Left>
-nmap <Leader>af :AgFile ""<Left>
+call vundle#end()
 
-" --------------vim-rspec---------------------
-Plugin 'thoughtbot/vim-rspec'
-
-Plugin 'crooloose/syntastic.git'
-let g:syntastic_check_on_open=1
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_wq = 0
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-" RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_runner = "os_x_iterm2"
-" --------------vim-rspec---------------------
-
-Plugin 'keith/rspec.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'rizzatti/dash.vim'
-
-call vundle#end()            " required
-
-filetype plugin indent on    " required
+filetype plugin indent on
 
 " #########  Vundle end  ########
