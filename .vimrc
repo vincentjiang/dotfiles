@@ -134,6 +134,7 @@ Plugin 'ervandew/supertab'
 
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+let g:UltiSnipsJumpForwardTrigger="<tab>"
 
 Plugin 'scrooloose/nerdcommenter'
 
