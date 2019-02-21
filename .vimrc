@@ -89,6 +89,13 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
+set rtp+=/usr/local/opt/fzf
+Plugin 'junegunn/fzf.vim'
+nnoremap <C-p> :Files<CR>
+nnoremap <C-o> :Buffers<CR>
+nnoremap <Leader>h :History<CR>
+nnoremap <Leader>ag :Ag<Space>
+nnoremap <Leader>rg :Rg<Space>
 
 Plugin 'tpope/vim-rails'
 
@@ -102,19 +109,6 @@ let g:NERDTreeAutoDeleteBuffer = 1
 let g:NERDTreeStatusLine = -1
 let NERDTreeShowHidden = 1
 
-Plugin 'kien/ctrlp.vim'
-map <C-o> :CtrlPBuffer<CR>
-let g:ctrlp_switch_buffer = 0
-if executable('ag')
-  let s:ctrlp_fallback = 'ag %s --nocolor -l -g "'
-elseif executable('ack-grep')
-  let s:ctrlp_fallback = 'ack-grep %s --nocolor -f'
-elseif executable('ack')
-  let s:ctrlp_fallback = 'ack %s --nocolor -f'
-else
-  let s:ctrlp_fallback = 'find %s -type f'
-endif
-
 Plugin 'slim-template/vim-slim'
 
 Plugin 'airblade/vim-gitgutter'
@@ -122,10 +116,6 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 
 Plugin 'w0rp/ale'
-
-Plugin 'mileszs/ack.vim'
-let g:ackprg = 'ag --nogroup --nocolor --column'
-nnoremap <Leader>a :Ack!<Space>
 
 Plugin 'tpope/vim-fugitive'
 nnoremap <Leader>gb :Gblame<CR>
