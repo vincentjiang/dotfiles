@@ -128,6 +128,8 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 
 Plugin 'scrooloose/nerdcommenter'
 
+Plugin 'google/vim-searchindex'
+
 call vundle#end()
 
 filetype plugin indent on
